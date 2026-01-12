@@ -1,24 +1,32 @@
 from array import array
 from time import sleep_ms
-from pyb import Pin
+from pyb import Timer, Pin
+
+tim7 = Timer(7, freq=700)           
+adc = pyb.ADC(Pin.board.PC0)     
+PC1 = Pin(Pin.board.PC1, mode=Pin.OUT_PP)
+idx = 0
+data = array('H', 500*[0])                #defining array,idx
+done = 0
+PC1.low() 
+sleep_ms(1000)
+
+
 
 def tim_cb(tim):
-    global data, idx
-    
-    data[idx] = adc.read()
-    idx=idx+1
-    if idx == (len(data) - 1):
-        PC1.low()                         #input signal off
-        print(f"{idx}, {data[idx]}")             
+    global data, idx, done
+    if idx < 499:
+        data[idx] = adc.read()
+        idx +=  1
+    else:
         tim7.callback(None)               #callback off
+        PC1.low()                         #input signal off
+        done = 1
         
-
-data = array('H', 500*[0])                #defining arrays/timers/pins, length of array was 
-tim7 = Timer(7, freq=700)                 #from time constant times 5 divided by how long in between each sample
-PC1 = Pin(Pin.board.PC1, mode=Pin.OUT_PP)
-adc = pyb.ADC(Pin.board.PC0)
-
 tim7.callback(tim_cb)                      #callback on
 sleep_ms(1) 
 PC1.high()                                 #input signal on            
 
+sleep_ms(4000)
+for idx,out in enumerate(data):
+    print(f"{idx}, {out}") 
