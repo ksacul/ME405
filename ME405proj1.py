@@ -1,18 +1,24 @@
 from array import array
 from time import sleep_ms
 from pyb import Pin
+
 def tim_cb(tim):
     global data, idx
-    tim7 = Timer(7, freq=700)
-    PC1 = Pin(Pin.board.PC1, mode=Pin.OUT_PP)
     
-    PC1.high() #input signal on
+    data[idx] = adc.read()
+    idx=idx+1
+    if idx == (len(data) - 1):
+        PC1.low()                         #input signal off
+        print(f"{idx}, {data[idx]}")             
+        tim7.callback(None)               #callback off
+        
 
-    tim7.callback(tim_cb) #callback on
-    data = array('H', 1000*[0])
-    data[idx] = 47
+data = array('H', 500*[0])                #defining arrays/timers/pins, length of array was 
+tim7 = Timer(7, freq=700)                 #from time constant times 5 divided by how long in between each sample
+PC1 = Pin(Pin.board.PC1, mode=Pin.OUT_PP)
+adc = pyb.ADC(Pin.board.PC0)
 
-    sleep_ms(705) #time constant is .141s 
-    PC1.low() #input signal off
-    tim7.callback(None) #callback off
-    print(f"{idx}, {data[idx]}")
+tim7.callback(tim_cb)                      #callback on
+sleep_ms(1) 
+PC1.high()                                 #input signal on            
+
