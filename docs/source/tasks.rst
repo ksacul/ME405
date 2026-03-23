@@ -1,5 +1,5 @@
-API
-===
+Tasks
+=====
 
 .. toctree::
    :maxdepth: 1

@@ -10,8 +10,7 @@ Welcome to the ROMI documentation.
    :maxdepth: 2
    :caption: Contents
 
-   overview
-   installation
-   usage
-   api
+   Hardware
+   Tasks
+   Results
 
