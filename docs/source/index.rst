@@ -4,13 +4,14 @@
 ME405 ROMI documentation
 ========================
 
-Welcome to the ROMI documentation.
+Welcome to our Romi robot documentation.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents
 
-   Hardware
-   Tasks
-   Results
+   overview
+   hardware
+   tasks
+   results
 
