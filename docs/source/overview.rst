@@ -1,8 +1,6 @@
 Overview
 ========
 
-This site documents the ME405 line following ROMI time trial project. For source code, please visit https://github.com/ksacul/ME405.
-
 Purpose
 -------
 

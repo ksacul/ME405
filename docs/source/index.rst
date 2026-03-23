@@ -4,7 +4,9 @@
 ME405 ROMI documentation
 ========================
 
-Welcome to our Romi robot documentation.
+Welcome to our Romi robot documentation. The Romi designed to execute line following function and wall avoidance using a bump sensor. 
+
+Sourcecode hosted at: https://github.com/ksacul/ME405
 
 .. toctree::
    :maxdepth: 2
