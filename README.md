@@ -9,4 +9,4 @@ California Polytechnic State University, San Luis Obispo
 
 This is the codebase for the drivers and logic that power the Pololu Romi robot's line following function. It is powered by a Nucelo-L476RG board running Micropython and uses a 7-segment IR sensor with a Bump sensor to navigate.
 
-More details hosted at the [docuemntation page][(https://ksacul.github.io/ME405/).
+More details hosted at the documentation page: (https://ksacul.github.io/ME405/).
