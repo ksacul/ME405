@@ -15,6 +15,8 @@ The motor FSM details general motor logic for controlling motor stop/go.
    :align: center
    :alt: Motor FSM
 
+Below are all the tasks and drivers for Romi:
+
 .. toctree::
    :maxdepth: 1
 
