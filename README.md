@@ -1,34 +1,11 @@
-# Romi solution notes
+## ME 405 ROMI Line Following Robot Repository
+By: Lucas Kaemmerer, Brandon Petty
 
-## Current bumper setup
-- One front bumper is installed.
-- The code is already set for `PB7`.
-- The bumper input is configured as `Pin.IN` with `Pin.PULL_UP`.
-- The interrupt is `Pin.IRQ_FALLING` because the switch idles high and goes low when pressed.
+ME 405 - Charlie Refvem
+California Polytechnic State University, San Luis Obispo
 
-## Startup behavior
-- `AUTOSTART = False` in `main.py`
-- With that setting, the robot stays idle at boot until you send a serial command.
-- Change `AUTOSTART = True` later when you want the full course FSM to begin on power-up.
+# Overview
 
-## Serial commands
-- `g` full course
-- `1` CP0 -> CP1 straight only
-- `2` garage contact only
-- `3` garage recovery spin only
-- `4` CP2 -> CP3 only
-- `5` CP3 -> CP4 only
-- `6` CP4 -> CP5 return only
-- `x` stop
-- `l` show front bumper state
-- `c` clear front bumper latch
-- `f` slow forward jog
-- `b` slow reverse jog
-- `n` spin left
-- `m` spin right
+This is the codebase for the drivers and logic that power the Pololu Romi robot's line following function. It is powered by a Nucelo-L476RG board running Micropython and uses a 7-segment IR sensor with a Bump sensor to navigate.
 
-## What to tune next
-- segment distances in `task_course.py`
-- base speeds and line gains
-- garage recovery timing and turn speed
-- final auto-start setting before competition
+More details hosted at the [docuemntation page][(https://ksacul.github.io/ME405/).
