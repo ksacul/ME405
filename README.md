@@ -1,4 +1,4 @@
-## ME 405 ROMI Line Following Robot Repository
+### ME 405 ROMI Line Following Robot Repository
 By: Lucas Kaemmerer, Brandon Petty
 
 ME 405 - Charlie Refvem
