@@ -1,6 +1,13 @@
 Tasks
 =====
 
+The task diagram illustrates a high-level overview of the Romi robot's function.
+
+.. figure:: images/taskdiagram.png
+   :width: 500px
+   :align: center
+   :alt: Task Diagram
+
 The course FSM details the logic behind the course navigation.
 
 .. figure:: images/taskcoursefsm.png
