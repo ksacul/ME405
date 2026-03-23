@@ -4,7 +4,14 @@ Results
 Time Trial
 ----------
 
-Our Romi robot was able to successfully navigate the course all 3 times in ~47 seconds per run. It recieved no environmental time modifiers. Demonstration: https://www.youtube.com/watch?v=C2cvVYkPYGg.
+Our Romi robot was able to successfully navigate the course all 3 times in ~47 seconds per run. It recieved no environmental time modifiers. 
+
+
+Demonstration: 
+
+.. youtube:: C2cvVYkPYGg
+   :width: 640
+   :height: 480
 
 Discussion
 ----------
