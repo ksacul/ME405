@@ -6,7 +6,7 @@ Chasis
 
 We are using the Pololu Romi chassis with the corresponding Motor Driver and Power Distribution Board for the Romi Chassis. The robot runs off 6 AA rechargable NiMH batteries.
 
-.. figure:: images/red chassis.png
+.. figure:: images/redchassis.png
    :width: 500px
    :align: center
    :alt: ROMI chassis
@@ -32,14 +32,14 @@ Our Romi robot is equipped with:
 Pinout
 ------
 
-From the Nucleo-L476RG official documentation, this image details the pin labels.
+From the Nucleo-L476RG official documentation, this image details the pin labels:
 
-.. figure:: images/pin label.png
+.. figure:: images/pinlabel.png
    :width: 500px
    :align: center
    :alt: L476RG pin labels
 
-This is the pinout which we used on our Romi.
+This is the pinout which we used on our Romi:
 
 .. figure:: images/pinout.png
    :width: 500px
